@@ -1,7 +1,7 @@
 .header {
     position: absolute;
+    z-index: 99;
     width: 100%;
-
 
     .allHeader {
         display: flex;
@@ -18,12 +18,48 @@
             }
         }
 
-        .links {
+        .linksHeader {
             .menu {
                 ul {
                     display: flex;
 
+
                     li {
+                        &.dropdown-li {
+                            position: relative;
+
+
+                            &:hover {
+                                ul {
+                                    visibility: visible;
+                                    opacity: 1;
+                                    border: 2px solid #111417;
+                                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+                                    transition: .3s ease-in;
+
+                                }
+                            }
+
+                            ul {
+                                position: absolute;
+                                background: #182029;
+                                min-width: 200px;
+                                opacity: 0;
+                                visibility: hidden;
+                                top: 100%;
+                                border-radius: 10px;
+                                a{
+                                    padding: 15px 10px;
+                                    &:hover{
+                                        &::before{
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                     
+                        }
+
 
                         a {
                             color: #fff;
@@ -32,6 +68,32 @@
                             display: block;
                             font-size: 15px;
                             font-weight: 700;
+                            transition: .2s ease-in;
+                            position: relative;
+
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                width: 40px;
+                                height: 1px;
+                                background: #45f882;
+                                top: 45px;
+                                left: 30px;
+                                transform: translate(-50% -50%);
+                                transition: .1s ease-in;
+                                opacity: 0;
+                            }
+
+                            &:hover {
+                                color: #45f882;
+
+                                &::before {
+                                    transform: rotate(-45deg);
+                                    opacity: 1;
+
+                                }
+                            }
 
                         }
                     }
@@ -43,13 +105,13 @@
             }
         }
 
-        .searchContent {
+        .searchContentHeader {
             ul {
                 display: flex;
                 align-items: center;
                 gap: 50px;
 
-                .searchIcon {
+                .searchIconHeader {
                     a {
                         position: relative;
 
@@ -57,8 +119,6 @@
                             color: #fff;
                             font-size: 25px;
                             transition: .2s ease-in;
-
-                            
                         }
 
                         &::before {
@@ -71,13 +131,10 @@
                             background: #0D1318;
                         }
                     }
-                    &:hover .searchIcon a i {
-                        color: #45f882;
-                    }
                 }
-                
 
-                .btn {
+
+                .btnHeader {
                     button {
                         display: inline-block;
                         position: relative;
@@ -105,7 +162,7 @@
                     }
                 }
 
-                .burger {
+                .burgerHeader {
 
                     /* <reset-style> ============================ */
                     button {
@@ -121,10 +178,10 @@
                     /* <style for bg> ======== */
                     .background {
                         border-radius: 16px;
-                        // border: 1px solid #1a1a1a;
+                        border: none;
                         // background: rgba(74, 74, 74, 0.39);
                         mix-blend-mode: luminosity;
-                        box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
+                        // box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.20);
                         backdrop-filter: blur(15px);
                         width: 65px;
                         height: 65px;
@@ -133,6 +190,7 @@
                         align-items: center;
                     }
 
+                    /* <style for menu__icon> ======== */
                     .menu__icon {
                         width: 32px;
                         height: 32px;
@@ -140,7 +198,6 @@
                         display: flex;
                         flex-direction: column;
                         justify-content: space-between;
-                        align-items: end;
                         transition: transform .4s;
                     }
 
@@ -148,16 +205,16 @@
                         width: 100%;
                         height: 0.25rem;
                         border-radius: 0.125rem;
-                        background-color: rgb(0, 122, 255);
+                        background-color: silver;
                         box-shadow: 0 .5px 2px 0 hsla(0, 0%, 0%, .2);
                         transition: width .4s, transform .4s, background-color .4s;
                     }
 
-                    .menu__icon :nth-child(2) {
+                    .menu__icon :nth-child(1) {
                         width: 75%;
                     }
 
-                    .menu__icon :nth-child(3) {
+                    .menu__icon :nth-child(2) {
                         width: 50%;
                     }
 
@@ -167,8 +224,8 @@
 
                     .menu__icon:hover span {
                         width: .25rem;
-                        transform: translateX(-10px);
-                        background-color: rgb(255, 59, 48);
+                        transform: translateX(10px);
+                        background-color: #757575;
                     }
                 }
             }

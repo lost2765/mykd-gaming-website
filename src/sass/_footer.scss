@@ -1,0 +1,168 @@
+.footer {
+    .container {
+        width: 80%;
+    }
+
+    background-color: #0F161B;
+    // height: 70vh;
+
+    .allFooter {
+        padding-top: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .left {
+            width: 25%;
+
+            .imgLogo {
+                width: 180px;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .txtLeft {
+                margin-top: 1rem;
+
+                .topP {
+                    color: #757575;
+                    font-size: 18px;
+                }
+
+                .bottomText {
+                    margin-top: 1rem;
+
+                    p {
+                        color: #fff;
+                        text-transform: uppercase;
+                        font-weight: 800;
+                    }
+
+                    span {
+                        color: #45F882;
+
+                    }
+
+                    .social {
+                        padding-top: 2rem;
+
+                        ul {
+                            display: flex;
+                            align-items: center;
+                            gap: 15px;
+
+                            li {
+                                a {
+                                    img {
+                                        width: 30px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .quickLink {
+            h4 {
+                color: #fff;
+                font-size: 18px;
+            }
+
+            ul {
+                margin-top: 1rem;
+
+                li {
+                    a {
+                        color: #c8c2c2;
+                        margin-bottom: 10px;
+                        display: block;
+                        transition: .1s ease-in-out;
+
+                        &:hover {
+                            color: #45F882;
+                        }
+                    }
+                }
+            }
+        }
+
+        .news {
+            margin-bottom: 3rem;
+
+            h4 {
+                color: #fff;
+                font-size: 18px;
+            }
+
+            p {
+                color: #ADB0BC;
+                font-family: "Poppins", Sans-serif;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 1.75em;
+            }
+
+            form {
+                margin-top: 2rem;
+                position: relative;
+
+                input {
+                    display: block;
+                    border: none;
+                    background: #1f2935;
+                    width: 100%;
+                    border-radius: 6px;
+                    padding: 17px 100px 17px 25px;
+                    font-weight: 400;
+                    font-size: 14px;
+                    height: 60px;
+                    outline: none;
+                }
+
+                button {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 63px;
+                    height: 100%;
+                    border: none;
+                    padding: 10px;
+                    border-radius: 6px;
+                    font-size: 28px;
+                    color: #1f2935;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background: #45f882;
+                    transition: .2s ease-in;
+
+                    &:hover {
+                        background-color: #FFBE18;
+                    }
+
+                }
+            }
+        }
+    }
+
+    .bottomFooter {
+        background-color: #090D10;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 3rem;
+        justify-content: space-evenly;
+        padding: 20px 0;
+
+        span {
+            color: #ADB0BC;
+            font-weight: 800;
+        }
+    }
+}
